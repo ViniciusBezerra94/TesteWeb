@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      >
+    <h:head>
+        <title>testeweb</title>
+        <link href="#{request.contextPath}/resource/css/bootstrap.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="resource/js/funcao.js"></script>
+    </h:head>
+    <h:body>
+
+        <h:form id="form1" onsubmit="return criticar()" class="form-horizontal" >
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Negociação de Mercadoria</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="codMerc">Código Mercadoria</label>
+                    <div class="col-md-4">
+
+                        <h:inputText id="codMerc" value="#{negocioBean.negocio.codMercadoria}" class="form-control input-md" />
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Tipo Mercadoria</label>
+                    <div class="col-md-4">
+                        <h:inputText id="tipoMerc" value="#{negocioBean.negocio.tipoMercadoria}" class="form-control input-md" />
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Nome da Mercadoria</label>
+                    <div class="col-md-4">
+                        <h:inputText id="nomeMerc" value="#{negocioBean.negocio.nomeMercadoria}" class="form-control input-md" />
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Quantidade</label>
+                    <div class="col-md-4">
+                        <h:inputText id="quantidade" value="#{negocioBean.negocio.quantidade}" class="form-control input-md" />
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Preço</label>
+                    <div class="col-md-4">
+                        <h:inputText id="preco" a:placeholder="R$ 0,00" value="#{negocioBean.negocio.preco}"  class="form-control input-md" >
+                        <f:convertNumber type="currency" pattern="#0.00" currencySymbol="R$" locale="pt_BR" />
+                        
+                        </h:inputText>
+                    </div>
+                </div>
+
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="radios">Tipo do Negócio</label>
+                    <div class="col-md-4">
+
+                        <h:selectOneRadio id="myRadio" value="#{negocioBean.negocio.tipoNegocio}"  required="true">
+                            <f:selectItem itemValue="Compra" itemLabel="Compra"   />
+                            <f:selectItem itemValue="Venda" itemLabel="Venda" />
+
+                        </h:selectOneRadio>
+
+
+                    </div>
+                </div>
+
+                <!-- Button (Double) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="buttonConfir"></label>
+                    <div class="col-md-8">
+                        <h:commandButton value="Confirmar" id="buttonConf" onclick="#{negocioBean.salvar()}" class="btn btn-success" />
+
+                        <h:commandButton value="Limpar" onclick="limpar()" id="buttonLimpar" class="btn btn-danger" />
+
+                    </div>
+                </div>
+
+            </fieldset>
+        </h:form>
+
+
+    </h:body>
+</html>
