@@ -7,6 +7,8 @@ package com.mycompany.testeweb.dao;
 
 import javax.persistence.EntityManager;
 import com.mycompany.testeweb.entity.Negocio;
+import java.util.List;
+import javax.persistence.Query;
 
 /**
  *
@@ -16,13 +18,18 @@ import com.mycompany.testeweb.entity.Negocio;
 
 public class NegocioDAO extends GenericoDAO<Negocio>{
              
-    
+             
+    private EntityManager etm;
     
     public NegocioDAO(EntityManager em) {
         super(em);
-       
+        etm = em;
     }
     
+        public List<Negocio> buscarTodosNegocios(){
+        Query q = etm.createNamedQuery("negocio.buscarTodosNegocios");
+        return q.getResultList();
+    }
     
                                                                                                                                                 
 }

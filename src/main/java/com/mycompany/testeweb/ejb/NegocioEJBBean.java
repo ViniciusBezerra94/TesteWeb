@@ -10,8 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import com.mycompany.testeweb.dao.NegocioDAO;
 import com.mycompany.testeweb.entity.Negocio;
-
-
+import java.util.List;
 
 /**
  *
@@ -19,16 +18,16 @@ import com.mycompany.testeweb.entity.Negocio;
  */
 @Stateless
 public class NegocioEJBBean implements NegocioLocal {
-    
+
     @PersistenceContext(unitName = "NegocioPU")
     private EntityManager em;
 
     @Override
     public Negocio salvar(Negocio n) throws Exception {
-        try{
+        try {
             NegocioDAO dao = new NegocioDAO(em);
             return dao.salvar(n);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -45,8 +44,11 @@ public class NegocioEJBBean implements NegocioLocal {
         NegocioDAO dao = new NegocioDAO(em);
         dao.remover(Negocio.class, id);
     }
-    
-    
-    
-    
+
+    @Override
+    public List<Negocio> buscarTodosNegocios() {
+        NegocioDAO dao = new NegocioDAO(em);
+        return dao.buscarTodosNegocios();
+    }
+
 }

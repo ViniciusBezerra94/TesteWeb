@@ -1,7 +1,7 @@
-C:\Users\SUPORTE116\Documents\NetBeansProjects\TesteWeb\src\main\java\com\mycompany\testeweb\ejb\NegocioLocal.java
-C:\Users\SUPORTE116\Documents\NetBeansProjects\TesteWeb\src\main\java\com\mycompany\testeweb\dao\GenericoDAO.java
-C:\Users\SUPORTE116\Documents\NetBeansProjects\TesteWeb\src\main\java\com\mycompany\testeweb\entity\Negocio.java
-C:\Users\SUPORTE116\Documents\NetBeansProjects\TesteWeb\src\main\java\com\mycompany\testeweb\entity\EntidadeBase.java
-C:\Users\SUPORTE116\Documents\NetBeansProjects\TesteWeb\src\main\java\com\mycompany\testeweb\bean\NegocioBean.java
-C:\Users\SUPORTE116\Documents\NetBeansProjects\TesteWeb\src\main\java\com\mycompany\testeweb\dao\NegocioDAO.java
-C:\Users\SUPORTE116\Documents\NetBeansProjects\TesteWeb\src\main\java\com\mycompany\testeweb\ejb\NegocioEJBBean.java
+/home/vinicius/GitHub/TesteWeb/src/main/java/com/mycompany/testeweb/dao/NegocioDAO.java
+/home/vinicius/GitHub/TesteWeb/src/main/java/com/mycompany/testeweb/dao/GenericoDAO.java
+/home/vinicius/GitHub/TesteWeb/src/main/java/com/mycompany/testeweb/bean/NegocioBean.java
+/home/vinicius/GitHub/TesteWeb/src/main/java/com/mycompany/testeweb/entity/Negocio.java
+/home/vinicius/GitHub/TesteWeb/src/main/java/com/mycompany/testeweb/ejb/NegocioEJBBean.java
+/home/vinicius/GitHub/TesteWeb/src/main/java/com/mycompany/testeweb/entity/EntidadeBase.java
+/home/vinicius/GitHub/TesteWeb/src/main/java/com/mycompany/testeweb/ejb/NegocioLocal.java

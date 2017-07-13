@@ -6,6 +6,7 @@
 package com.mycompany.testeweb.ejb;
 
 import com.mycompany.testeweb.entity.Negocio;
+import java.util.List;
 import javax.ejb.Local;
 
 /**
@@ -17,5 +18,6 @@ public interface NegocioLocal {
     public Negocio salvar(Negocio n) throws Exception;
     public Negocio consultarPorId(Long id);
     public void remover(Long id);
+    public List<Negocio> buscarTodosNegocios();
     
 }

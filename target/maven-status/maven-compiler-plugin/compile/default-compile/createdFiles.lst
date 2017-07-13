@@ -1,7 +1,8 @@
-com\mycompany\testeweb\bean\NegocioBean.class
-com\mycompany\testeweb\ejb\NegocioEJBBean.class
-com\mycompany\testeweb\ejb\NegocioLocal.class
-com\mycompany\testeweb\entity\EntidadeBase.class
-com\mycompany\testeweb\entity\Negocio.class
-com\mycompany\testeweb\dao\GenericoDAO.class
-com\mycompany\testeweb\dao\NegocioDAO.class
+com/mycompany/testeweb/ejb/NegocioLocal.class
+com/mycompany/testeweb/dao/NegocioDAO.class
+com/mycompany/testeweb/entity/Negocio.class
+com/mycompany/testeweb/dao/GenericoDAO.class
+com/mycompany/testeweb/entity/Negocio_.class
+com/mycompany/testeweb/ejb/NegocioEJBBean.class
+com/mycompany/testeweb/bean/NegocioBean.class
+com/mycompany/testeweb/entity/EntidadeBase.class

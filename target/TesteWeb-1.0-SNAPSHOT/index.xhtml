@@ -7,7 +7,9 @@
       >
     <h:head>
         <title>testeweb</title>
-        <link href="#{request.contextPath}/resource/css/bootstrap.min.css" rel="stylesheet" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />  
+        <link href="resource/css/bootstrap.min.css" rel="stylesheet" />
         <script type="text/javascript" src="resource/js/funcao.js"></script>
     </h:head>
     <h:body>
@@ -59,8 +61,8 @@
                     <label class="col-md-4 control-label" for="textinput">Preço</label>
                     <div class="col-md-4">
                         <h:inputText id="preco" a:placeholder="R$ 0,00" value="#{negocioBean.negocio.preco}"  class="form-control input-md" >
-                        <f:convertNumber type="currency" pattern="#0.00" currencySymbol="R$" locale="pt_BR" />
-                        
+                            <f:convertNumber type="currency" pattern="#0.00" currencySymbol="R$" locale="pt_BR" />
+
                         </h:inputText>
                     </div>
                 </div>
@@ -84,7 +86,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="buttonConfir"></label>
                     <div class="col-md-8">
-                        <h:commandButton value="Confirmar" id="buttonConf" onclick="#{negocioBean.salvar()}" class="btn btn-success" />
+                        <h:commandButton value="Confirmar" id="buttonConf" action="#{negocioBean.salvar()}" class="btn btn-success" />
 
                         <h:commandButton value="Limpar" onclick="limpar()" id="buttonLimpar" class="btn btn-danger" />
 
@@ -93,7 +95,43 @@
 
             </fieldset>
         </h:form>
+        <h:form id="formTabela">
+            <div class="container">
+                <h:dataTable  id="tabela-mercadoria" styleClass=" table table-striped"  value="#{negocioBean.negocios}" var="negocio">
+                    <h:column >
+                        <!-- column header -->
+                        <f:facet name="header">Codigo Mercadoria</f:facet>
+                        <!-- row record -->
+                        <h:outputText  value="#{negocio.codMercadoria}" />
+                    </h:column>
 
+                    <h:column >
+                        <f:facet name="header">Nome Mercadoria</f:facet>
+                        <h:outputText   value="#{negocio.nomeMercadoria}"/>
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Preço</f:facet>
+                        <h:outputText value="#{negocio.preco}"/>
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Quantidade</f:facet>
+                        <h:outputText value="#{negocio.quantidade}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Tipo Mercadoria</f:facet>
+                        <h:outputText value="#{negocio.tipoMercadoria}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Tipo Negocio</f:facet>
+                        <h:outputText value="#{negocio.tipoNegocio}"/>
+                    </h:column>
+
+                </h:dataTable>
+
+            </div>
+        </h:form>
 
     </h:body>
 </html>
